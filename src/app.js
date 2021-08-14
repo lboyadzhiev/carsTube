@@ -8,6 +8,10 @@ import { loginPage } from './views/login.js';
 import { registerPage } from './views/register.js';
 import { myPage } from './views/myCatalog.js';
 
+import * as api from './api/data.js';
+
+window.api = api;
+
 page('/home', homePage);
 page('/register', registerPage);
 page('/login', loginPage);
