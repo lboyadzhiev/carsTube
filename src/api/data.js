@@ -26,3 +26,13 @@ export async function login(username, password) {
 
     return result;
 }
+
+export async function logout() {
+    const result = await api.get(host + '/users/logout');
+
+    sessionStorage.removeItem('username');
+    sessionStorage.removeItem('authToken');
+    sessionStorage.removeItem('userId');
+
+    return result;
+}
