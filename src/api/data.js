@@ -36,3 +36,23 @@ export async function logout() {
 
     return result;
 }
+
+export async function getItems() {
+    return await api.get(host + '/data/cars?sortBy=_createdOn%20desc');
+}
+
+export async function getItemsById(id) {
+    return await api.get(host + '/data/cars/' + id);
+}
+
+export async function createItem(data) {
+    return await api.post(host + '/data/cars', data);
+}
+
+export async function editItem(id, data) {
+    return await api.put(host + '/data/cars/' + id, data);
+}
+
+export async function deleteItem(id) {
+    return await api.del(host + '/data/cars/' + id);
+}
