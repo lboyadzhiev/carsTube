@@ -24,7 +24,7 @@ page('/login', renderMiddleware, loginPage);
 page('/catalog', renderMiddleware, catalogPage);
 page('/create', renderMiddleware, createPage);
 page('/details/:id', renderMiddleware, detailsPage);
-page('/edit', renderMiddleware, editPage);
+page('/edit/:id', renderMiddleware, editPage);
 page('/my-list', renderMiddleware, myPage);
 
 document.getElementById('logoutBtn').addEventListener('click', logoutApi);

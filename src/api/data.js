@@ -45,8 +45,8 @@ export async function getItemsById(id) {
     return await api.get(host + '/data/cars/' + id);
 }
 
-export async function createItem(data) {
-    return await api.post(host + '/data/cars', data);
+export async function createItem(data, id) {
+    return await api.post(host + '/data/cars/' + id, data);
 }
 
 export async function editItem(id, data) {
