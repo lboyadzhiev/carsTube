@@ -17,6 +17,7 @@ import * as api from './api/data.js';
 
 window.api = api;
 
+page('/', renderMiddleware, homePage);
 page('/home', renderMiddleware, homePage);
 page('/register', renderMiddleware, registerPage);
 page('/login', renderMiddleware, loginPage);
