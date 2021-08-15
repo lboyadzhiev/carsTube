@@ -36,7 +36,6 @@ const createTemplate = (onSubmit) => html`
 `;
 export async function createPage(ctx) {
     const token = sessionStorage.getItem('authToken');
-    const userId = sessionStorage.getItem('userId');
     if (token != null) {
         ctx.render(createTemplate(onSubmit));
     }
@@ -56,7 +55,7 @@ export async function createPage(ctx) {
             return alert('All fields are required!');
         }
 
-        await createItem(userId, {
+        await createItem({
             brand,
             model,
             description,
