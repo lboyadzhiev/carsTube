@@ -25,13 +25,12 @@ const itemTemplate = (item) => html`
                 <h3>Price: ${item.price} $</h3>
             </div>
             <div class="data-buttons">
-                <a href="${`/details/${item._id}`}" class="button-carDetails">Details</a>
+                <a href="/details/${item._id}" class="button-carDetails">Details</a>
             </div>
         </div>
     </div>
 `;
 export async function catalogPage(ctx) {
-    console.log('listing page');
     const data = await getItems();
 
     ctx.render(catalogTemplate(data));

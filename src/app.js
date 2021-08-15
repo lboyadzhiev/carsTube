@@ -23,7 +23,7 @@ page('/register', renderMiddleware, registerPage);
 page('/login', renderMiddleware, loginPage);
 page('/catalog', renderMiddleware, catalogPage);
 page('/create', renderMiddleware, createPage);
-page('/details', renderMiddleware, detailsPage);
+page('/details/:id', renderMiddleware, detailsPage);
 page('/edit', renderMiddleware, editPage);
 page('/my-list', renderMiddleware, myPage);
 
